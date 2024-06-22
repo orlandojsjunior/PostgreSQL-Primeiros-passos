@@ -26,6 +26,13 @@ CREATE TABLE aluno(
 	hora_aula TIME,
 	matriculado_em TIMESTAMP
 	
-)
+);
 
 select * from aluno;
+
+'''
+Corrigigindo a coluna dinehiro
+
+'''
+
+ALTER TABLE aluno RENAME COLUMN dinehiro TO dinheiro;

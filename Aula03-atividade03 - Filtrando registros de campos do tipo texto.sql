@@ -26,9 +26,9 @@ INSERT INTO ALUNO (
     'Diego'
 );
 
-''' 
-Usar o = quando precisar pesquisar exatamente o 'TEXTO'.
-'''
+
+-- Usar o = quando precisar pesquisar exatamente o 'TEXTO'.
+
 
 SELECT
     *
@@ -37,9 +37,9 @@ FROM
 WHERE
     NOME = 'Diogo';
 
-''' 
-Usar o <> ou != quando precisar pesquisar diferente do 'TEXTO'.
-'''
+
+-- Usar o <> ou != quando precisar pesquisar diferente do 'TEXTO'.
+
 
 SELECT
     *

@@ -1,24 +1,24 @@
-CREATE TABLE aluno
-(
-	id SERIAL,
-	nome VARCHAR(255),
-	cpf CHAR(11),
-	observacao TEXT,
-	idade INTEGER,
-	dinehiro NUMERIC(10,2),
-	altura REAL,
-	ativo BOOLEAN,
-	data_nascimento DATE,
-	hora_aula TIME,
-	matriculado_em TIMESTAMP
-	
+CREATE TABLE ALUNO (
+	ID SERIAL,
+	NOME VARCHAR(255),
+	CPF CHAR(11),
+	OBSERVACAO TEXT,
+	IDADE INTEGER,
+	DINEHIRO NUMERIC(10, 2),
+	ALTURA REAL,
+	ATIVO BOOLEAN,
+	DATA_NASCIMENTO DATE,
+	HORA_AULA TIME,
+	MATRICULADO_EM TIMESTAMP
 );
 
-select * from aluno;
+SELECT
+	*
+FROM
+	ALUNO;
 
 '''
 Corrigigindo a coluna dinehiro
-
 '''
 
-ALTER TABLE aluno RENAME COLUMN dinehiro TO dinheiro;
+ALTER TABLE ALUNO RENAME COLUMN DINEHIRO TO DINHEIRO;

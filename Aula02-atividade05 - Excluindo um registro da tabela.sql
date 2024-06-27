@@ -1,17 +1,21 @@
- SELECT * 
-   FROM aluno
-  WHERE nome = 'Nico';
+SELECT
+  *
+FROM
+  ALUNO
+WHERE
+  NOME = 'Nico';
 
-DELETE 
-   FROM aluno
-  WHERE nome = 'Nico';
+DELETE FROM ALUNO
+WHERE
+  NOME = 'Nico';
 
+SELECT
+  *
+FROM
+  ALUNO
+WHERE
+  NOME = 'Orlando';
 
-
- SELECT * 
-   FROM aluno
-  WHERE nome = 'Orlando';
-
-DELETE 
-   FROM aluno
-  WHERE nome = 'Orlando';
+DELETE FROM ALUNO
+WHERE
+  NOME = 'Orlando';

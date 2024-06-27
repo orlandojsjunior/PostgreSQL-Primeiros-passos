@@ -1,14 +1,14 @@
-INSERT INTO aluno (
-    nome,
-    cpf,
-    observacao,
-    idade,
-    dinheiro,
-    altura,
-    ativo,
-    data_nascimento,
-    hora_aula,
-    matriculado_em
+INSERT INTO ALUNO (
+    NOME,
+    CPF,
+    OBSERVACAO,
+    IDADE,
+    DINHEIRO,
+    ALTURA,
+    ATIVO,
+    DATA_NASCIMENTO,
+    HORA_AULA,
+    MATRICULADO_EM
 ) VALUES (
     'Diogo',
     '12345678901',
@@ -22,26 +22,30 @@ INSERT INTO aluno (
     '2020-02-08 12:32:45'
 );
 
-SELECT * 
-	FROM aluno;
+SELECT
+    *
+FROM
+    ALUNO;
 
-
-SELECT nome,
-       idade,
-       matriculado_em
-    FROM aluno;
+SELECT
+    NOME,
+    IDADE,
+    MATRICULADO_EM
+FROM
+    ALUNO;
 
 '''
-A partir dessa seleção, podemos usar o comando AS, ou seja, um alias, para trocar o nome de exibição dos campos na tabela. 
-Se escrevermos SELECT matriculado_em AS quando_se_matriculou, essa coluna aparecerá com o nome "quando_se_matriculou".
 
+A partir dessa seleção, podemos usar o comando AS, ou seja, um alias, para trocar o nome de exibição dos campos na tabela.
+
+Se escrevermos SELECT matriculado_em AS quando_se_matriculou, essa coluna aparecerá com o nome "quando_se_matriculou".
 O alias também pode ser usado para atribuir nomes com espaço para os campos, o que pode ser útil, por exemplo, para elaborar um relatório. 
 Nesses casos, os novos nomes precisam estar entre aspas duplas " ", ou o programa não irá reconhecê-los e aparecerá uma mensagem de erro de sintaxe.
-
 '''
-	
-SELECT nome AS "Nome do Aluno",
-       idade,
-       matriculado_em AS quando_se_matriculou
-    FROM aluno;
 
+SELECT
+    NOME           AS "Nome do Aluno",
+    IDADE,
+    MATRICULADO_EM AS QUANDO_SE_MATRICULOU
+FROM
+    ALUNO;

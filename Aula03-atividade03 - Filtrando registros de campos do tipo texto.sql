@@ -1,6 +1,6 @@
-''' 
-Inserindo dados na tabela
-'''
+
+-- Inserindo dados na tabela
+
 
 INSERT INTO ALUNO (
     NOME
@@ -48,9 +48,9 @@ FROM
 WHERE
     NOME <> 'Diogo';
 
-''' 
-Usar o LIKE quando precisar usar um operador (_ ou %) especial na pesquisa.
-'''
+
+-- Usar o LIKE quando precisar usar um operador (_ ou %) especial na pesquisa.
+
 
 SELECT
     *
@@ -87,9 +87,9 @@ FROM
 WHERE
     NOME LIKE '%i%a%';
 
-''' 
-Usar o NOT LIKE quando precisar ignorar uma condição na pesquisa.
-'''
+
+-- Usar o NOT LIKE quando precisar ignorar uma condição na pesquisa.
+
 
 SELECT
     *

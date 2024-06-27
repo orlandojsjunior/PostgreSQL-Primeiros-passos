@@ -16,6 +16,6 @@
 WHERE id = 1;
 
 
- SELECT *  FROM aluno ;
+ SELECT * FROM aluno ;
   
   

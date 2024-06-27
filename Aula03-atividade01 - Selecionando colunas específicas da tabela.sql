@@ -34,14 +34,15 @@ SELECT
 FROM
     ALUNO;
 
-'''
+/*
 
 A partir dessa seleção, podemos usar o comando AS, ou seja, um alias, para trocar o nome de exibição dos campos na tabela.
 
 Se escrevermos SELECT matriculado_em AS quando_se_matriculou, essa coluna aparecerá com o nome "quando_se_matriculou".
 O alias também pode ser usado para atribuir nomes com espaço para os campos, o que pode ser útil, por exemplo, para elaborar um relatório. 
 Nesses casos, os novos nomes precisam estar entre aspas duplas " ", ou o programa não irá reconhecê-los e aparecerá uma mensagem de erro de sintaxe.
-'''
+
+*/
 
 SELECT
     NOME           AS "Nome do Aluno",

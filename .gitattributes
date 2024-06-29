@@ -2,6 +2,6 @@
 *.sql linguist-language=sql
 *.sql text
 
-*.MD linguist-detectable=true
-*.MD linguist-language=MD
-*.MD text
+*.md linguist-detectable=true
+*.md linguist-language=md
+*.md text

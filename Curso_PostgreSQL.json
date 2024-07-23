@@ -1,0 +1,19 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "PostgreSQL 12",
+            "Group": "Servers",
+            "Host": "localhost",
+            "Port": 5433,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "Comment": "Auto-detected PostgreSQL 12 installation with the data directory at C:\\Program Files\\PostgreSQL\\12\\data",
+            "TunnelPort": "22",
+            "KerberosAuthentication": false,
+            "ConnectionParameters": {
+                "sslmode": "prefer",
+                "connect_timeout": 10
+            }
+        }
+    }
+}

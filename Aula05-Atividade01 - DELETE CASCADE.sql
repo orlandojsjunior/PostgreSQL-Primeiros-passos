@@ -1,7 +1,9 @@
 -- Nesta aula aprenderemos algumas opções de restrição de chave estrangeira, e para isso precisamos conferir como está o nosso sistema.
 	
 SELECT * FROM aluno;
+
 SELECT * FROM aluno_curso;
+
 SELECT * FROM curso;
 
 /*
@@ -44,8 +46,7 @@ ele também será excluído do curso.
 
 -- Escreveremos DROP TABLE aluno_curso para apagar a tabela existente e criá-la com essa nova função.
 
-DROP TABLE aluno_curso
-
+DROP TABLE aluno_curso;
 
 CREATE TABLE aluno_curso (
     aluno_id INTEGER,
@@ -64,9 +65,14 @@ CREATE TABLE aluno_curso (
 -- Como recriamos a tabela, temos que registrar as matrículas para testarmos o funcionamento do DELETE CASCADE.
 
 INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (1,1);
+
 INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (2,1);
+
 INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (3,1);
+
 INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (1,3);
+
+
 
 -- Executando a query com join da aula passada, confirmaremos, através dos nomes, a matrícula dos alunos.
 

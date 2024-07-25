@@ -1,10 +1,19 @@
 -- Nesta aula aprenderemos algumas opções de restrição de chave estrangeira, e para isso precisamos conferir como está o nosso sistema.
-	
-SELECT * FROM aluno;
 
-SELECT * FROM aluno_curso;
+SELECT
+    *
+FROM
+    ALUNO;
 
-SELECT * FROM curso;
+SELECT
+    *
+FROM
+    ALUNO_CURSO;
+
+SELECT
+    *
+FROM
+    CURSO;
 
 /*
 Consultando cada tabela, notamos que temos quatro alunos em "aluno", 
@@ -14,24 +23,21 @@ aparecerá uma mensagem de erro. Por exemplo, ao inserirmos o comando DELETE FRO
 não conseguimos apagar os dados do Diogo, porque seu registro está associado a um curso na tabela "aluno_curso".
 */
 
-DELETE FROM aluno WHERE id = 1;
+DELETE FROM ALUNO
+WHERE
+    ID = 1;
 
 /*
 Precisamos descobrir uma maneira para quando deletarmos o registro do aluno, 
 também apagarmos sua matrícula. Para isso, analisaremos a chave estrangeira no nosso código de criação da tabela.
 */
 
-CREATE TABLE aluno_curso (
-    aluno_id INTEGER,
-    curso_id INTEGER,
-    PRIMARY KEY (aluno_id, curso_id),
-
-    FOREIGN KEY (aluno_id)
-     REFERENCES aluno (id),
-
-    FOREIGN KEY (curso_id)
-     REFERENCES curso (id)
-
+CREATE TABLE ALUNO_CURSO (
+    ALUNO_ID INTEGER,
+    CURSO_ID INTEGER,
+    PRIMARY KEY (ALUNO_ID, CURSO_ID),
+    FOREIGN KEY (ALUNO_ID) REFERENCES ALUNO (ID),
+    FOREIGN KEY (CURSO_ID) REFERENCES CURSO (ID)
 );
 
 /*
@@ -46,33 +52,49 @@ ele também será excluído do curso.
 
 -- Escreveremos DROP TABLE aluno_curso para apagar a tabela existente e criá-la com essa nova função.
 
-DROP TABLE aluno_curso;
+DROP TABLE ALUNO_CURSO;
 
-CREATE TABLE aluno_curso (
-    aluno_id INTEGER,
-    curso_id INTEGER,
-    PRIMARY KEY (aluno_id, curso_id),
-
-    FOREIGN KEY (aluno_id)
-     REFERENCES aluno (id)
-     ON DELETE CASCADE,
-
-    FOREIGN KEY (curso_id)
-     REFERENCES curso (id)
-
+CREATE TABLE ALUNO_CURSO (
+    ALUNO_ID INTEGER,
+    CURSO_ID INTEGER,
+    PRIMARY KEY (ALUNO_ID, CURSO_ID),
+    FOREIGN KEY (ALUNO_ID) REFERENCES ALUNO (ID) ON DELETE CASCADE,
+    FOREIGN KEY (CURSO_ID) REFERENCES CURSO (ID)
 );
 
 -- Como recriamos a tabela, temos que registrar as matrículas para testarmos o funcionamento do DELETE CASCADE.
 
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (1,1);
+INSERT INTO ALUNO_CURSO (
+    ALUNO_ID,
+    CURSO_ID
+) VALUES (
+    1,
+    1
+);
 
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (2,1);
+INSERT INTO ALUNO_CURSO (
+    ALUNO_ID,
+    CURSO_ID
+) VALUES (
+    2,
+    1
+);
 
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (3,1);
+INSERT INTO ALUNO_CURSO (
+    ALUNO_ID,
+    CURSO_ID
+) VALUES (
+    3,
+    1
+);
 
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (1,3);
-
-
+INSERT INTO ALUNO_CURSO (
+    ALUNO_ID,
+    CURSO_ID
+) VALUES (
+    1,
+    3
+);
 
 -- Executando a query com join da aula passada, confirmaremos, através dos nomes, a matrícula dos alunos.
 

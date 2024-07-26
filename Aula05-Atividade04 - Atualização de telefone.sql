@@ -1,27 +1,49 @@
 -- Você está trabalhando em um projeto de agenda telefônica, que existe com a estrutura abaixo:
 
-CREATE TABLE pessoas (
-    id INTEGER PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL
+CREATE TABLE PESSOAS (
+    ID INTEGER PRIMARY KEY,
+    NOME VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE telefones (
-    id INTEGER PRIMARY KEY,
-    pessoa_id INTEGER,
-    numero VARCHAR(15) NOT NULL,
-    FOREIGN KEY (pessoa_id) REFERENCES pessoas (id)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE
+CREATE TABLE TELEFONES (
+    ID INTEGER PRIMARY KEY,
+    PESSOA_ID INTEGER,
+    NUMERO VARCHAR(15) NOT NULL,
+    FOREIGN KEY (PESSOA_ID) REFERENCES PESSOAS (ID) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
-INSERT INTO pessoas (id, nome) VALUES (1,'Diogo');
-INSERT INTO telefones (id, pessoa_id, numero) VALUES (1,1,'(21) 98765-4321');
+INSERT INTO PESSOAS (
+    ID,
+    NOME
+) VALUES (
+    1,
+    'Diogo'
+);
 
+INSERT INTO TELEFONES (
+    ID,
+    PESSOA_ID,
+    NUMERO
+) VALUES (
+    1,
+    1,
+    '(21) 98765-4321'
+);
 
 -- Ao executar os comandos abaixo:
 
-UPDATE pessoas SET id = 2 WHERE nome = 'Diogo'; -- Sucesso na alteração do id da pessoa
-DELETE FROM pessoas WHERE nome = 'Diogo'; -- Erro na exclusão da pessoa
+UPDATE PESSOAS
+SET
+    ID = 2
+WHERE
+    NOME = 'Diogo';
+
+-- Sucesso na alteração do id da pessoa
+DELETE FROM PESSOAS
+WHERE
+    NOME = 'Diogo';
+
+-- Erro na exclusão da pessoa
 
 
 -- Qual será o resultado?

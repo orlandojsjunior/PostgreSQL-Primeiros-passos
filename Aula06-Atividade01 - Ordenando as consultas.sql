@@ -26,6 +26,19 @@ SELECT *
     FROM funcionarios
     ORDER BY nome;
 
+SELECT * 
+    FROM funcionarios
+    ORDER BY nome, matricula;
+
+SELECT * 
+    FROM funcionarios
+    ORDER BY nome, matricula DESC;
+
+SELECT * 
+    FROM funcionarios
+    ORDER BY 3,2;
+
+
 
 -- Inserindo mais um "Diogo" na nossa tabela
 
@@ -69,7 +82,10 @@ SELECT
     FROM aluno
     JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
     JOIN curso ON curso.id = aluno_curso.curso_id
-    ORDER BY curso.nome, aluno.nome
+    ORDER BY curso.nome, aluno.nome DESC
 
+SELECT * FROM CURSO;
+SELECT * FROM ALUNO;
 
+INSERT INTO aluno_curso (aluno_id, curso_id) VALUES (20, 3);
 

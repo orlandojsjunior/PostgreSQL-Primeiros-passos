@@ -9,66 +9,92 @@ Para filtrar esses dados, não podemos usar WHERE cpf = NULL , porque "= NULL" n
 então não retornará nenhum resultado.
 */
 
-SELECT *
-    FROM aluno
- WHERE cpf IS NULL;
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    CPF IS NULL;
 
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    CPF IS NOT NULL;
 
-SELECT *
-    FROM aluno
- WHERE cpf IS NOT NULL;
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE = 35;
 
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE <> 36;
 
-SELECT *
-    FROM aluno
- WHERE idade = 35;
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE >= 36;
 
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE <= 36;
 
-SELECT *
-    FROM aluno
- WHERE idade <> 36;
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE > 35;
 
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE < 100;
 
-SELECT *
-    FROM aluno
- WHERE idade >= 36;
-
-
-SELECT *
-    FROM aluno
- WHERE idade <= 36;
-
-
-SELECT *
-    FROM aluno
- WHERE idade > 35;
-
-
-SELECT *
-    FROM aluno
- WHERE idade < 100;
-
-
-SELECT *
-    FROM aluno
- WHERE idade BETWEEN 10 AND 40;
-
-
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    IDADE BETWEEN 10 AND 40;
 
 -- Filtros Booleano
 
-SELECT * FROM aluno WHERE ativo = false
-
-SELECT * FROM aluno WHERE ativo = true
-
-	
-SELECT * FROM aluno WHERE ativo IS Null
-
-SELECT * FROM aluno WHERE ativo IS NOT Null
-
-
-
-
-
-
-
+SELECT
+    *
+FROM
+    ALUNO
+WHERE
+    ATIVO = FALSE
+    SELECT
+        *
+    FROM
+        ALUNO
+    WHERE
+        ATIVO = TRUE
+        SELECT
+            *
+        FROM
+            ALUNO
+        WHERE
+            ATIVO IS NULL
+            SELECT
+                *
+            FROM
+                ALUNO
+            WHERE
+                ATIVO IS NOT NULL

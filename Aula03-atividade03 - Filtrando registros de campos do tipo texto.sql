@@ -1,4 +1,3 @@
-
 -- Inserindo dados na tabela
 
 
@@ -26,7 +25,6 @@ INSERT INTO ALUNO (
     'Diego'
 );
 
-
 -- Usar o = quando precisar pesquisar exatamente o 'TEXTO'.
 
 
@@ -37,7 +35,6 @@ FROM
 WHERE
     NOME = 'Diogo';
 
-
 -- Usar o <> ou != quando precisar pesquisar diferente do 'TEXTO'.
 
 
@@ -47,7 +44,6 @@ FROM
     ALUNO
 WHERE
     NOME <> 'Diogo';
-
 
 -- Usar o LIKE quando precisar usar um operador (_ ou %) especial na pesquisa.
 
@@ -86,7 +82,6 @@ FROM
     ALUNO
 WHERE
     NOME LIKE '%i%a%';
-
 
 -- Usar o NOT LIKE quando precisar ignorar uma condição na pesquisa.
 

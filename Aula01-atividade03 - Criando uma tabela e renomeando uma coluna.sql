@@ -17,8 +17,6 @@ SELECT
 FROM
 	ALUNO;
 
+ALTER TABLE ALUNO RENAME COLUMN DINEHIRO TO DINHEIRO;
 
-
-
-
-ALTER TABLE ALUNO RENAME COLUMN DINEHIRO TO DINHEIRO; -- Corrigigindo a coluna dinehiro
+-- Corrigigindo a coluna dinehiro

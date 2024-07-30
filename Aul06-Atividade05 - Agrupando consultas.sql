@@ -5,7 +5,11 @@ Adicionando o comando ORDER BY nome; à nossa busca, perceberemos a presença de
 Existem duas formas desse nome não se repetir nos resultados. A primeira que conheceremos será a partir do DISTINCT.
 */
 
-SELECT DISTINCT
+SELECT *
+FROM funcionarios;
+
+
+SELECT DISTINCT -- O DISTINCT garante que os dados do campo solicitado não se repitam.
         nome
   FROM funcionarios
   ORDER BY nome;

@@ -16,4 +16,4 @@ SQL, manipule e pesquise dados com um dos bancos de dados mais avançado de cód
 - Atualizando e apagando dados com UPDATE e DELETE
 - Filtrando os registros com WHERE
 - Ordenando os dados com o ORDER BY
-- Juntando registros de tabelas com JOIN**
+- Juntando registros de tabelas com JOIN
